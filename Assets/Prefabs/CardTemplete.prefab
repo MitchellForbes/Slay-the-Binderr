@@ -102,6 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCard: {fileID: 11400000, guid: ed33e0d4804b52d4c9607ed2bb853ddb, type: 2}
+  nameText: {fileID: 3351276299373276391}
+  energyText: {fileID: 2486122866247355914}
+  descriptionText: {fileID: 1251617713270850729}
 --- !u!61 &4850438430501529707
 BoxCollider2D:
   m_ObjectHideFlags: 0
