@@ -7,13 +7,16 @@ public class Enemy : MonoBehaviour
 {
     public int health;
 
-    public int damage = 3;
+    private int damage;
 
     PlayerHealth playerHealth;
+
+    public bool debuff = false;
     void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         health = Random.Range(40, 50);
+
     }
 
     // Update is called once per frame
@@ -30,6 +33,14 @@ public class Enemy : MonoBehaviour
 
     public void DamagePlayer()
     {
+        damage = Random.Range(4, 8);
+
+        if (debuff == true)
+        {
+            damage /= 2;
+            Debug.Log(damage);
+        }
+
         playerHealth.health -= damage;
         Debug.Log("player Damaged");
     }

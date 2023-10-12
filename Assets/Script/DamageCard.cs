@@ -21,28 +21,24 @@ public class DamageCard : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Test");
-        }
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+    //private void Update()
+    //{
+    //    if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+    //    {
+    //        Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
 
-            RaycastHit hit;
+    //        RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.tag == "Card")
-                {
-                    attackCard.DamageEnemy();
-                }
-            }
+    //        if (Physics.Raycast(ray, out hit))
+    //        {
+    //            if (hit.transform.tag == "Card")
+    //            {
+    //                attackCard.DamageEnemy();
+    //            }
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
     void AttackEnemy()
     {

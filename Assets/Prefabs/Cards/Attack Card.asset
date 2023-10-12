@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Attack Card
   m_EditorClassIdentifier: 
   name: Damage Card
-  description: Deals damage
+  description: Deals 5 damage
   energCost: 2
   damage: 5
   heal: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491026f7b0d4e9345870c7cb26ade861, type: 3}
   m_Name: Heal Card
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  energCost: 0
+  name: Heal
+  description: Heal the player for 5 health
+  energCost: 2
   damage: 0
-  heal: 0
+  heal: 5

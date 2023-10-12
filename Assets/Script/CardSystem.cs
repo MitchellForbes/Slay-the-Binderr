@@ -14,6 +14,8 @@ public class CardSystem : ScriptableObject
     public int heal;
 
     Enemy enemy;
+    PlayerHealth player;
+    PlayerTurns turns;
 
     public void DamageEnemy()
     {
@@ -21,5 +23,25 @@ public class CardSystem : ScriptableObject
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
 
         enemy.health -= damage;
+    }
+
+    public void HealPlayer()
+    {
+        Debug.Log(heal);
+
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+
+        player.health += heal;
+    }
+
+
+    public void DebuffEnemy()
+    {
+        Debug.Log("Enemy Debuffs");
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
+        turns = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerTurns>();
+
+        enemy.debuff = true;
+        turns.debuffCountDown = 3;
     }
 }

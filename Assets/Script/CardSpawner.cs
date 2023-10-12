@@ -5,20 +5,19 @@ using UnityEngine;
 public class CardSpawner : MonoBehaviour
 {
     List<GameObject> spawnPoints = new List<GameObject>();
-
-
+    public List<GameObject> cardList = new List<GameObject>();
 
     public GameObject card;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(cardList.Count);
         spawnPoints.AddRange(GameObject.FindGameObjectsWithTag("CardSpawner"));
-
         foreach (GameObject Spawn in spawnPoints)
         {
             
-            Instantiate(card, Spawn.transform.position, Quaternion.identity);
+            Instantiate(cardList[Random.Range(0, cardList.Count)], Spawn.transform.position, Quaternion.identity);
         }
     }
 
@@ -34,7 +33,7 @@ public class CardSpawner : MonoBehaviour
         foreach (GameObject Spawn in spawnPoints)
         {
 
-            Instantiate(card, Spawn.transform.position, Quaternion.identity);
+            Instantiate(cardList[Random.Range(0, cardList.Count)], Spawn.transform.position, Quaternion.identity);
             Debug.Log("card Added");
         }
         Debug.Log("hand drawn");

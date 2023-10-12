@@ -36,7 +36,7 @@ public class PlayerEnergy : MonoBehaviour
     public void PlayerText()
     {
         enemyHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
-        healthText.text = $"Health: {healthGet.health}";
+        healthText.text = $"Health: {healthGet.health}/{healthGet.maxHealth}";
         energyText.text = $"Energy: {currentEnergy}/{maxEnergy}";
         enemyHealthText.text = $"Enemy Health: {enemyHealth.health}";
     }
